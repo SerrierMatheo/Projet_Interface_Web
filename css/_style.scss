@@ -1,7 +1,12 @@
 $box-shadow_color: rgba(0, 0, 0, 0.31);
+$section-title-font-color: #ff7300;
 
 @mixin content-section {
   box-shadow: 5px 5px 20px -4px $box-shadow_color;
+
+  h3 {
+    color : $section-title-font-color;
+  }
 }
 
 body {
