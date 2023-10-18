@@ -1,5 +1,21 @@
+$box-shadow_color: rgba(0, 0, 0, 0.31);
+
+@mixin content-section {
+  box-shadow: 5px 5px 20px -4px $box-shadow_color;
+}
+
 body {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.header-bar {
+  box-shadow: 3px 5px 3px $box-shadow_color;
+  padding-bottom: 15px;
+  margin-right: 5px;
+}
+
+section {
+  @include content-section;
 }
 #web_dev {
   color: gray;
