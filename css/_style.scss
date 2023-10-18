@@ -8,7 +8,10 @@ $section-title-font-color: #ff7300;
     color : $section-title-font-color;
   }
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 body {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
