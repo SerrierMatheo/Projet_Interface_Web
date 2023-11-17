@@ -1,0 +1,116 @@
+$nb_columns: 12;
+$gutter: .5%;
+$one_column: calc((100% - (($nb_columns - 1) * $gutter)) / $nb_columns);
+
+
+@mixin container($width: 100vw, $margin: 0 auto) {
+  width: $width;
+  margin: $margin;
+}
+
+@mixin row($grow: 0, $shrink: 0, $direction: row, $wrap: wrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  box-sizing: border-box;
+}
+
+@mixin col($grow: 0, $shrink: 0, $justify: flex-start, $wrap: wrap) {
+  flex-wrap: $wrap;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  justify-content: $justify;
+  box-sizing: border-box;
+}
+
+@mixin item-width($column: 1, $nb_columns: 12) {
+  flex-basis: calc($one_column * $column + $gutter * ($column - 1));
+}
+
+@mixin offset($column: 1, $nb_columns: 12) {
+  margin-left: calc($one_column * $column + $gutter * ($column - 1));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  @include container;
+}
+
+.row {
+  @include row;
+}
+
+.col {
+  @include col;
+
+  & + .col {
+    margin-left: $gutter;
+  }
+}
+
+@for $i from 1 through $nb_columns {
+  .xs#{$i} {
+    @include item-width($i, $nb_columns);
+  }
+  offset-xs#{$i} {
+    @include offset($i, $nb_columns);
+  }
+}
+
+@media screen and (min-width: 632px) {
+  @for $i from 1 through $nb_columns {
+
+    .s#{$i} {
+      @include item-width($i, $nb_columns);
+    }
+    offset-s#{$i} {
+      @include offset($i, $nb_columns);
+    }
+  }
+}
+
+@media screen and (min-width: 878px) {
+  @for $i from 1 through $nb_columns {
+
+    .m#{$i} {
+      @include item-width($i, $nb_columns);
+    }
+    offset-m#{$i} {
+      @include offset($i, $nb_columns);
+    }
+  }
+}
+
+@media screen and (min-width: 1066px) {
+  @for $i from 1 through $nb_columns {
+
+    .l#{$i} {
+      @include item-width($i, $nb_columns);
+    }
+    offset-l#{$i} {
+      @include offset($i, $nb_columns);
+    }
+  }
+}
+
+@media screen and (min-width: 1259px) {
+  @for $i from 1 through $nb_columns {
+    .xl#{$i} {
+      @include item-width($i, $nb_columns);
+    }
+    offset-xl#{$i} {
+      @include offset($i, $nb_columns);
+    }
+  }
+}
