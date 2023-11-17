@@ -1,13 +1,28 @@
 @import "../utils/variables";
 
+.nav-wrapper {
+  padding-top: 10px;
+}
+
 nav ul {
   list-style-type: none;
 
+  li {
+    padding-top: 10px;
+
+    img {
+      padding-right: 7px;
+    }
+  }
+
   a {
     color: #ff7300;
+    font-size: 1.2em;
   }
 }
 
 .brand-logo {
   color: #ff7300;
+  font-size: 1.5em;
+  font-weight: bold;
 }

@@ -11,11 +11,25 @@
   font-size: 1.5em;
 }
 
-header ul {
+.header-bar ul {
   display: flex;
   gap: 10px;
 }
 
-header nav {
+#header-title {
+  margin-left: 2%;
 
+  display: flex;
+  gap: 20px;
+
+  #logo-app {
+    width: 70px;
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-weight: bolder;
+  }
 }
+
