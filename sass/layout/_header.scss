@@ -1,0 +1,21 @@
+@import "../utils/variables";
+
+.header-bar {
+  box-shadow: 3px 5px 3px $box-shadow_color;
+  padding-bottom: 15px;
+  margin-right: 5px;
+}
+
+#web_dev {
+  color: gray;
+  font-size: 1.5em;
+}
+
+header ul {
+  display: flex;
+  gap: 10px;
+}
+
+header nav {
+
+}
