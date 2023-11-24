@@ -1,0 +1,18 @@
+.section-content {
+  @include content-section(5px, 5px, 5px, -1px, $box-shadow_color);
+
+  &-main-img {
+    width: 100%;
+  }
+
+  &-box-title {
+    & > h4 {
+      position: relative;
+      z-index:1 ;
+      top: 0;
+    }
+    & > img {
+      width: 100%;
+    }
+  }
+}

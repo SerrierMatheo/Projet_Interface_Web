@@ -1,9 +1,37 @@
 @import "variables";
 
-@mixin content-section {
-  box-shadow: 5px 5px 20px -4px $box-shadow_color;
+
+@mixin shadow-box($x, $y, $blur, $spread, $color) {
+  box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin content-section($x, $y, $blur, $spread, $color) {
+  @include shadow-box($x, $y, $blur, $spread, $color);
+
+  h4 {
+    color: #c7a7a7;
+    font-weight: bold;
+  }
 
   h3 {
     color : $section-title-font-color;
+    font-weight: bold;
   }
+
+  .name {
+    text-decoration: underline;
+  }
+
+  .date {
+    font-style: italic;
+  }
+
+
+  .line {
+    border-bottom: black solid 5px;
+    width: 100px;
+    height: 5px;
+    margin: 0.3em 0;
+  }
+
 }

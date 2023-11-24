@@ -1,25 +1,11 @@
 @import "./utils/mixins";
 @import "./utils/my-grid";
 @import "./utils/variables";
-
 @import "./base/font";
-
+@import "./base/generic";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/navigation";
-
-
-a {
-  text-decoration: none;
-  color: black;
-}
-body {
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
-}
-
-
-section {
-  @include content-section;
-}
+@import "./layout/section";
 
 

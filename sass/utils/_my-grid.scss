@@ -1,5 +1,5 @@
 $nb_columns: 12;
-$gutter: .5%;
+$gutter: 0.5%;
 $one_column: calc((100% - (($nb_columns - 1) * $gutter)) / $nb_columns);
 
 
@@ -31,6 +31,8 @@ $one_column: calc((100% - (($nb_columns - 1) * $gutter)) / $nb_columns);
 
 @mixin offset($column: 1, $nb_columns: 12) {
   margin-left: calc($one_column * $column + $gutter * ($column - 1));
+  //$single-column-width: calc((100% - (($nb_columns - 1) * $gutter)) / $nb_columns);
+  //margin-left: calc(($column * $single-column-width) + $gutter * $column);
 }
 
 body {

@@ -1,9 +1,17 @@
 @import "../utils/variables";
+@import "../utils/mixins";
+
+//.header-bar {
+//  box-shadow: 3px 5px 3px $box-shadow_color;
+//  padding-bottom: 15px;
+//  margin-right: 5px;
+//}
 
 .header-bar {
-  box-shadow: 3px 5px 3px $box-shadow_color;
+  @include shadow-box(3px, 5px, 3px, 0px, $box-shadow_color);
   padding-bottom: 15px;
   margin-right: 5px;
+  width: 100%;
 }
 
 #web_dev {
@@ -14,7 +22,7 @@
 
 .header-bar ul {
   display: flex;
-  gap: 10px;
+  padding-top: 5px;
 }
 
 #header-title {

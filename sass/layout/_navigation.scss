@@ -1,19 +1,21 @@
 @import "../utils/variables";
 
-.nav-wrapper {
-  padding-top: 10px;
+.nav-list {
+  display: flex;
 }
 
 nav ul {
   list-style-type: none;
-
-  li {
-    padding-top: 10px;
-
-    img {
-      padding-right: 7px;
-    }
-  }
+  //display: flex;
+  //flex-direction: column;
+  //width: 10%;
+  //height: 10%;
+  //li {
+  //  padding-top: 10px;
+  //}
+  //  img {
+  //    padding-right: 7px;
+  //  }
 
   a {
     color: #ff7300;
@@ -22,6 +24,7 @@ nav ul {
 }
 
 .brand-logo {
+  margin-left: 0.9em;
   color: #ff7300;
   font-size: 1.5em;
   font-weight: bold;
