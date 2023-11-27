@@ -61,6 +61,8 @@ ul {
   }
 }
 
+
+
 @for $i from 1 through $nb_columns {
   .xs#{$i} {
     @include item-width($i, $nb_columns);
@@ -116,3 +118,17 @@ ul {
     }
   }
 }
+
+
+  @for $i from 2 through $nb_columns - 1 {
+    @if random(2) == 1 {
+        .section-content:nth-child(#{$i}), .section-content:nth-child(#{$i}) {
+          transform: rotate(random(1)+deg);
+        }
+    } @else {
+      .section-content:nth-child(#{$i}), .section-content:nth-child(#{$i})  {
+        transform: rotate(- random(1)+deg);
+      }
+    }
+  }
+

@@ -22,7 +22,9 @@
 
 .header-bar ul {
   display: flex;
-  padding-top: 5px;
+  justify-content: flex-end;
+  gap: 1em;
+  margin-right: 1em;
 }
 
 #header-title {
