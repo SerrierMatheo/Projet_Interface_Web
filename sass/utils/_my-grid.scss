@@ -1,6 +1,6 @@
 $nb_columns: 12;
-$gutter: 0.5%;
-$one_column: calc((100% - (($nb_columns - 1) * $gutter)) / $nb_columns);
+$gutter: 1%;
+$one_column: calc((100% - (($nb_columns - 1) * $gutter + 1%)) / $nb_columns);
 
 
 @mixin container($width: 100vw, $margin: 0 auto) {
