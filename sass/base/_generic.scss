@@ -7,3 +7,23 @@ body {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 
+.section-content {
+  & > img {
+  width: 1.25em;
+  height: 1.25em;
+  }
+}
+
+.next-page-button {
+  h6 {
+    font-size: 1em;
+  }
+  img {
+    width: 1.25em;
+    height: 1.25em;
+    margin-left: 0.5em;
+  }
+  display: flex;
+  justify-content: flex-end;
+  padding-right:10em;
+}
